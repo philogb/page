@@ -1,0 +1,169 @@
+[
+  {
+  "title": "",
+  "layout": "rotated_squares1",
+  "shape": "rotated_square",
+  "icon": "vine_white",
+  "icon_background": [
+    [8, 191, 143]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a1.mp4",
+      "a2.mp4",
+      "a3.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "circles1",
+  "shape": "circle",
+  "icon": "vine_white",
+  "icon_background": [
+    [62, 114, 29],
+    [92, 145, 49],
+    [101, 153, 72],
+    [148, 188, 121]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a7.mp4",
+      "a8.mp4",
+      "a9.mp4"
+    ]
+  }
+}
+,{
+  "title": "#Sunset",
+  "layout": "circles4",
+  "shape": "circle",
+  "icon": "twitter_white",
+  "icon_background": [
+    [29, 172, 238]
+  ],
+  "tweets": {
+    "displayed": 3,
+    "tweet_ids": [
+      "557347023876153344",
+      "557342384779182080",
+      "557332716228599808"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "squares3",
+  "shape": "square",
+  "icon": "vine_green",
+  "icon_background": [
+    [190, 190, 190]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a4.mp4",
+      "a5.mp4",
+      "a6.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "circles2",
+  "shape": "circle",
+  "icon": "vine_white",
+  "icon_background": [
+    [80, 165, 230],
+    [119, 178, 85],
+    [254, 204, 77],
+    [250, 116, 61],
+    [221, 46, 68],
+    [146, 103, 204]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a1.mp4",
+      "a2.mp4",
+      "a3.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "rotated_squares1",
+  "shape": "rotated_square",
+  "icon": "vine_white",
+  "icon_background": [
+    [80, 165, 230],
+    [119, 178, 85],
+    [254, 204, 77],
+    [250, 116, 61],
+    [221, 46, 68],
+    [146, 103, 204]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a7.mp4",
+      "a8.mp4",
+      "a9.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "squares2",
+  "shape": "square",
+  "icon": "vine_white",
+  "icon_background": [
+    [80, 165, 230],
+    [8, 191, 143]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a4.mp4",
+      "a5.mp4",
+      "a6.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "circles3",
+  "shape": "circle",
+  "icon": "vine_white",
+  "icon_background": [
+    [8, 191, 143]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a1.mp4",
+      "a2.mp4",
+      "a3.mp4"
+    ]
+  }
+},
+{
+  "title": "",
+  "layout": "squares3",
+  "shape": "square",
+  "icon": "vine_white",
+  "icon_background": [
+    [8, 191, 143]
+  ],
+  "vines": {
+    "displayed": 3,
+    "vine_ids": [
+      "a7.mp4",
+      "a8.mp4",
+      "a9.mp4"
+    ]
+  }
+}
+]
