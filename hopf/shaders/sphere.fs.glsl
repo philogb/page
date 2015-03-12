@@ -50,7 +50,7 @@ void main(void) {
 
   lightWeighting = ambientColor + diffuseLight + specularLight;
 
-  gl_FragColor = vec4(vec3(0.5) * lightWeighting, 0.5);
+  gl_FragColor = vec4(vColor * lightWeighting, 0.5);
 }
 
 
