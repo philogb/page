@@ -21402,6 +21402,8 @@ function rotateXY(phi, theta) {
   state.model = m1;
 }
 
+let initialiazing = true;
+
 const animationLoop = new __WEBPACK_IMPORTED_MODULE_1_luma_gl__["b" /* AnimationLoop */]({
   //glOptions: {
   //webgl2: true,
@@ -21484,6 +21486,11 @@ const animationLoop = new __WEBPACK_IMPORTED_MODULE_1_luma_gl__["b" /* Animation
       });
   },
   onRender({gl, sphere}) {
+    if (initialiazing) {
+      initialiazing = false;
+      document.querySelector('#loader').style.display = 'none';
+    }
+
     if (state.needsUpdate) {
       state.needsUpdate = false;
       sphere.setNeedsRedraw(true);
@@ -21552,7 +21559,7 @@ const imgCanvas = document.createElement('canvas');
 const land = new Image();
 land.src = 'img/landmaskout.jpg';
 land.onload = (e) => {
-  //console.log('>>>>load');
+  // console.log('>>>>load');
   imgCanvas.width = IMG_WIDTH_LANDMASK_OUT;
   imgCanvas.height = IMG_HEIGHT_LANDMASK_OUT;
   const ctx = imgCanvas.getContext('2d');
