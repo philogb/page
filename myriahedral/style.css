@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Ovo&v2);
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Ovo', serif;
+  font-size: 1em;
+  text-align: center;
+}
+header.heading {
+  position:absolute;
+  width:100%;
+  height:100px;
+  top:0;
+  left:0;
+}
+article {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+section {
+  text-align: left;
+  height: 100%;
+}
+section#abstract {
+  padding: 0 5px;
+  margin: 10px 0;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.controls a.title {
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+  width: 220px;
+  display:inline-block;
+}
+.controls a {
+  color: blue;
+}
+ul li {
+  margin-left: 15px;
+}
+.controls input {
+  width: 200px;
+  margin: 8px auto;
+  display: inline-block;
+}
+img.cuts {
+  display: block;
+  width: 500px;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid rgba(104, 100, 88, 0.08);
+}
+canvas#lumagl-canvas {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: rgb(252, 250, 225);
+  border: 1px solid rgba(104, 100, 88, 0.08);
+}
+canvas.test {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: black;
+  display: none;
+}
+.webgl-canvas {
+  width: 100%;
+  height: 100%;
+}
+.controls {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  top: 10px;
+  left: 10px;
+}
+

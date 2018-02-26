@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Myriahedral Projections</title>
+  <meta charset="utf-8" />
+  <meta name="copyright" content="Nicolas Garcia Belmonte" />
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/blog.png" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection, handheld" />
+  <!-- Twitter card -->
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:site" value="@philogb">
+  <meta name="twitter:creator" value="@philogb">
+  <meta name="twitter:url" value="http://philogb.github.io/page/myrihaedral">
+  <meta name="twitter:title" value="Nicolas Garcia Belmonte">
+  <meta name="twitter:description" value="Myriahedral Projections: Unfolding the Earth">
+  <meta name="twitter:image:src" value="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  <!--facebook open graph-->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nicolas Garcia Belmonte">
+  <meta property="og:url" content="http://philogb.github.io/page/myrihaedral">
+  <meta property="og:description" content="Myriahedral Projections: Unfolding the Earth">
+  <meta property="og:site_name" content="Twitter">
+  <meta property="og:image" content="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  </head>
+
+  <body>
+    <article>
+      <header class="heading">
+        <h1>Unfolding the Earth: Myriahedral Projections</h1>
+      </header>
+      <section id="interactive" style="display:none">
+        <div class="webgl-canvas graticule">
+          <canvas id="lumagl-canvas"></canvas>
+        </div>
+        <div class="controls">
+          <p>
+          <a href="https://www.win.tue.nl/~vanwijk/myriahedral/" target="_blank">Myriahedral Projections</a> combine map projection and origami techniques 
+          to provide maps without area or angle distortion (at the expense of many interrupts).
+          This technique was developed by <a href="http://www.win.tue.nl/~vanwijk/">Jarke van Wijk</a> in 2008. The demo celebrates the tenth anniversary of
+          such paper.
+          </p>
+          <p>
+          Find more information about the cuts in the <a href="#">blog post</a>.
+          </p>
+          Explore the projections below:
+          <ul>
+          Graticule: 
+             <li><a id="polyconic" data-name="graticule" href="#">Polyconic</a></li>
+             <li><a id="cylindric" data-name="graticule" href="#">Cylindric</a></li>
+             <li><a id="azimuthal" data-name="graticule" href="#">Azimuthal</a></li>
+             <li><a id="azimuthal2" data-name="graticule" href="#">Hemispheres</a></li>
+          </ul>
+          <ul>
+          Recursive Subdivision: 
+            <li><a id="tetrahedron" data-name="subdivision" href="#">Tetrahedron</a></li>
+            <li><a id="cube" data-name="subdivision" href="#">Cube</a></li>
+            <li><a id="octahedron" data-name="subdivision" href="#">Octahedron</a></li>
+            <li><a id="icosahedron" data-name="subdivision" href="#">Icosahedron</a></li>
+          </ul>
+          <ul>
+          Platonic Solids:
+            <li><a id="rot_tetrahedron" data-name="solids" href="#">Tetrahedron</a></li>
+            <li><a id="rot_cube" data-name="solids" href="#">Cube</a></li>
+            <li><a id="rot_octahedron" data-name="solids" href="#">Octahedron</a></li>
+            <li><a id="rot_dodecahedron" data-name="solids" href="#">Dodecahedron</a></li>
+            <li><a id="rot_icosahedron" data-name="solids" href="#">Icosahedron</a></li>
+          </ul>
+          <ul>
+          Geography Aligned Meshes:
+            <li><a id="sealine" data-name="geo" href="#">Sealine</a></li>
+            <li><a id="coastline" data-name="geo" href="#">Coastline</a></li>
+          Unfold: <input type=range min=0 max=1 step=0.01 value=1 id=unfold>
+          </ul>
+          <p>
+          Made by <a href="https://twitter.com/philogb">@philogb</a>.
+          </p>
+        </div>
+        </section>
+    </article>
+    <script src="bundle.js"></script>
+  </body>
+</html>
