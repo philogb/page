@@ -21553,19 +21553,19 @@ animationLoop.getInfo = () => {
  *
  */
 
-const imgCanvas = document.createElement('canvas');
+//const imgCanvas = document.createElement('canvas');
 //imgCanvas.className = 'test';
 //document.body.appendChild(imgCanvas);
-const land = new Image();
-land.src = 'img/landmaskout.jpg';
-land.onload = (e) => {
+//const land = new Image();
+//land.src = 'img/landmaskout.jpg';
+//land.onload = (e) => {
   // console.log('>>>>load');
-  imgCanvas.width = IMG_WIDTH_LANDMASK_OUT;
-  imgCanvas.height = IMG_HEIGHT_LANDMASK_OUT;
-  const ctx = imgCanvas.getContext('2d');
-  ctx.drawImage(land, 0, 0, IMG_WIDTH_LANDMASK_OUT, IMG_HEIGHT_LANDMASK_OUT);
-  const imgData = ctx.getImageData(0, 0, IMG_WIDTH_LANDMASK_OUT, IMG_HEIGHT_LANDMASK_OUT);
-  const data = imgData.data;
+  //imgCanvas.width = IMG_WIDTH_LANDMASK_OUT;
+  //imgCanvas.height = IMG_HEIGHT_LANDMASK_OUT;
+  //const ctx = imgCanvas.getContext('2d');
+  //ctx.drawImage(land, 0, 0, IMG_WIDTH_LANDMASK_OUT, IMG_HEIGHT_LANDMASK_OUT);
+  //const imgData = ctx.getImageData(0, 0, IMG_WIDTH_LANDMASK_OUT, IMG_HEIGHT_LANDMASK_OUT);
+  //const data = imgData.data;
 
   const queue = ['polyconic', 'cylindric', 'azimuthal', 'azimuthal2',
     'tetrahedron', 'cube', 'octahedron', 'icosahedron',
@@ -21575,9 +21575,9 @@ land.onload = (e) => {
         name: n,
         descriptor: state.unfoldableDescriptors[n]
       };
-      if (n == 'sealine' || n == 'coastline') {
-        ans.imgData = data;
-      }
+      //if (n == 'sealine' || n == 'coastline') {
+        //ans.imgData = data;
+      //}
       return ans;
     });
 
@@ -21589,7 +21589,7 @@ land.onload = (e) => {
       e.preventDefault && e.preventDefault();
       setTransform(name);
     });
-    el.innerHTML += ' * ';
+    el.innerHTML += ' &#10003; ';
     if (name == 'polyconic') {
       document.querySelector('#interactive').style.display = '';
       animationLoop.start({canvas: 'lumagl-canvas'});
@@ -21599,7 +21599,7 @@ land.onload = (e) => {
     }
   });
   pool.processQueue(queue);
-};
+//};
 // expose on Window for standalone example
 
 
