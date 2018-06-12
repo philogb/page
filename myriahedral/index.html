@@ -4,7 +4,7 @@
     <title>Myriahedral Projections</title>
   <meta charset="utf-8" />
   <meta name="copyright" content="Nicolas Garcia Belmonte" />
-  <link rel="shortcut icon" type="image/ico" href="img/blog.ico" />
+  <link rel="shortcut icon" type="image/ico" href="img/blog2.ico" />
   <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection, handheld" />
   <!-- Twitter card -->
   <meta name="twitter:card" value="summary_large_image">
@@ -41,7 +41,7 @@
           <a href="https://www.win.tue.nl/~vanwijk/myriahedral/" target="_blank">Myriahedral Projections</a> combine map projection and origami techniques 
           to provide maps without area or angle distortion (at the expense of many interrupts).
           This technique was developed by <a href="http://www.win.tue.nl/~vanwijk/">Jarke van Wijk</a> in 2008. The demo celebrates the tenth anniversary of
-          such paper.
+          this paper.
           </p>
           <!--<p>Find more information about the cuts in the <a href="#">blog post</a>.</p>-->
           Explore the projections below:
@@ -51,6 +51,8 @@
              <li><a id="cylindric" data-name="graticule" href="#">Cylindric</a></li>
              <li><a id="azimuthal" data-name="graticule" href="#">Azimuthal</a></li>
              <li><a id="azimuthal2" data-name="graticule" href="#">Hemispheres</a></li>
+             <li><a id="grat_sealine" data-name="graticule" href="#">Sealine</a></li>
+             <li><a id="grat_coastline" data-name="graticule" href="#">Coastline</a></li>
           </ul>
           <ul>
           Recursive Subdivision: 
@@ -70,7 +72,10 @@
           <ul>
           Geography Aligned Meshes:
             <li><a id="sealine" data-name="geo" href="#">Sealine</a></li>
+            <li><a id="or_sealine" data-name="geo" href="#">Sealine Oriented</a></li>
+            <li><a id="cont_ocean" data-name="geo" href="#">Continents vs. Oceans</a></li>
             <li><a id="coastline" data-name="geo" href="#">Coastline</a></li>
+            <li><a id="tectonic" data-name="geo" href="#">Tectonic Plates</a></li>
           Unfold: <input type=range min=0 max=1 step=0.01 value=1 id=unfold>
           </ul>
           <p>
@@ -79,6 +84,6 @@
         </div>
         </section>
     </article>
-    <script src="bundle.js"></script>
+    <script src="bundle.js?1"></script>
   </body>
 </html>
