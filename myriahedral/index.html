@@ -21,16 +21,16 @@
   <meta property="og:description" content="Myriahedral Projections: Unfolding the Earth">
   <meta property="og:site_name" content="Twitter">
   <meta property="og:image" content="http://philogb.github.io/page/myriahedral/img/graticule.png">
+
   </head>
 
-  <body>
+  <body class=debug>
     <article>
       <header class="heading">
         <h1>Unfolding the Earth: Myriahedral Projections</h1>
       </header>
       <div id="loader">
-        <img src="img/loading.png" width="300px" />
-        <span>Loading...(avg. load time ~8s)</span>
+        <span></span>
       </div>
       <section id="interactive" style="display:none">
         <div class="webgl-canvas graticule">
@@ -38,13 +38,8 @@
         </div>
         <div class="controls">
           <p>
-          <a href="https://www.win.tue.nl/~vanwijk/myriahedral/" target="_blank">Myriahedral Projections</a> combine map projection and origami techniques 
-          to provide maps without area or angle distortion (at the expense of many interrupts).
-          This technique was developed by <a href="http://www.win.tue.nl/~vanwijk/">Jarke van Wijk</a> in 2008. The demo celebrates the tenth anniversary of
-          this paper.
+            This project celebrates the 10th anniversary of <a href="https://www.win.tue.nl/~vanwijk/myriahedral/" target="_blank">Myriahedral Projections</a>. <br><br>Explore the projections below:
           </p>
-          <!--<p>Find more information about the cuts in the <a href="#">blog post</a>.</p>-->
-          Explore the projections below:
           <ul>
           Graticule: 
              <li><a id="polyconic" data-name="graticule" href="#">Polyconic</a></li>
@@ -60,6 +55,9 @@
             <li><a id="cube" data-name="subdivision" href="#">Cube</a></li>
             <li><a id="octahedron" data-name="subdivision" href="#">Octahedron</a></li>
             <li><a id="icosahedron" data-name="subdivision" href="#">Icosahedron</a></li>
+            <li><a id="cuboctahedron" data-name="subdivision" href="#">Cuboctahedron</a></li>
+            <li><a id="small_rhombicuboctahedron" data-name="subdivision" href="#">Small rhombicuboctahedron</a></li>
+            <li><a id="snub_cube" data-name="subdivision" href="#">Snub cube</a></li>
           </ul>
           <ul>
           Platonic Solids:
@@ -70,6 +68,22 @@
             <li><a id="rot_icosahedron" data-name="solids" href="#">Icosahedron</a></li>
           </ul>
           <ul>
+            Archimedean Solids:
+            <li><a id="rot_truncated_tetrahedron" data-name="solids" href="#">Truncated tetrahedron</a></li>
+            <li><a id="rot_cuboctahedron" data-name="solids" href="#">Cuboctahedron</a></li>
+            <li><a id="rot_truncated_cube" data-name="solids" href="#">Truncated cube</a></li>
+            <li><a id="rot_truncated_octahedron" data-name="solids" href="#">Truncated octahedron</a></li>
+            <li><a id="rot_small_rhombicuboctahedron" data-name="solids" href="#">Small rhombicuboctahedron</a></li>
+            <li><a id="rot_great_rhombicuboctahedron" data-name="solids" href="#">Great rhombicuboctahedron</a></li>
+            <li><a id="rot_snub_cube" data-name="solids" href="#">Snub cube</a></li>
+            <li><a id="rot_icosidodecahedron" data-name="solids" href="#">Icosidodecahedron</a></li>
+            <li><a id="rot_truncated_dodecahedron" data-name="solids" href="#">Truncated dodecahedron</a></li>
+            <li><a id="rot_truncated_icosahedron" data-name="solids" href="#">Truncated icosahedron</a></li>
+            <li><a id="rot_small_rhombicosidodecahedron" data-name="solids" href="#">Small rhombicosidodecahedron</a></li>
+            <li><a id="rot_great_rhombicosidodecahedron" data-name="solids" href="#">Great rhombicosidodecahedron</a></li>
+            <li><a id="rot_snub_dodecahedron" data-name="solids" href="#">Snub dodecahedron</a></li>
+          </ul>
+          <ul>
           Geography Aligned Meshes:
             <li><a id="sealine" data-name="geo" href="#">Sealine</a></li>
             <!--<li><a id="or_sealine" data-name="geo" href="#">Sealine Oriented</a></li>-->
@@ -78,9 +92,9 @@
             <!--<li><a id="tectonic" data-name="geo" href="#">Tectonic Plates</a></li>-->
           </ul>
           <ul>
-            <a href="https://eng.uber.com/h3/" target="_blank">H3</a>:
-          <li><a id="h3_sealine0" data-name="geo" href="#">H3(0) Sealine</a></li>
-          <li><a id="h3_sealine1" data-name="geo" href="#">H3(1) Sealine</a></li>
+            <!--<a href="https://eng.uber.com/h3/" target="_blank">H3</a>:-->
+          <!--<li><a id="h3_sealine0" data-name="geo" href="#">H3(0) Sealine</a></li>-->
+          <!--<li><a id="h3_sealine1" data-name="geo" href="#">H3(1) Sealine</a></li>-->
           <!--<li><a id="h3_sealine2" data-name="geo" href="#">H3(2) Sealine</a></li>-->
           Unfold: <input type=range min=0 max=1 step=0.01 value=1 id=unfold>
           </ul>
