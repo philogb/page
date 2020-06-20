@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Ovo&v2);
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Ovo', serif;
+  font-size: 1em;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  /*background-color: rgb(255, 255, 255);*/
+}
+
+header.heading {
+  position:absolute;
+  width:100%;
+  height:100px;
+  top:0;
+  left:0;
+  display:none;
+}
+
+video.hidden {
+    display: none;
+}
+
+video {
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+body.fullscreen header.heading {
+  visibility: hidden;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+section {
+  text-align: left;
+  height: 100%;
+}
+section#abstract {
+  padding: 0 5px;
+  margin: 10px 0;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.controls a.title {
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+  width: 220px;
+  display:inline-block;
+}
+.controls a {
+  color: blue;
+}
+
+.controls ul {
+  width: 250px;
+  display:inline-block;
+  vertical-align:bottom;
+  margin:0;
+  padding:0;
+}
+
+ul li {
+  margin-left: -20px;
+  padding-left: 0;
+  list-style-type: none;
+  color: gray;
+}
+.controls input {
+  width: 100px;
+  margin: 8px auto;
+  display: inline-block;
+}
+
+body.fullscreen .controls {
+  display: none;
+}
+
+img.cuts {
+  display: block;
+  width: 500px;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid rgba(104, 100, 88, 0.08);
+}
+canvas#lumagl-canvas {
+  /*cursor: none;*/
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: rgba(104, 100, 88, 0.08);
+  /*border: 1px solid rgba(104, 100, 88, 0.08);*/
+}
+body.debug canvas#lumagl-canvas {
+  /*background-color: rgb(22, 25, 22);*/
+  /*filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.2));*/
+}
+
+canvas.test {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: black;
+  display: none;
+}
+
+#loader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.webgl-canvas {
+  width: 100%;
+  height: 100%;
+}
+.controls {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  /*width: 400px;*/
+  bottom: 5px;
+  right: 5px;
+  /*top: 10px;*/
+  /*left: 10px;*/
+}
+
+.controls ul li:nth-child(1),
+.controls ul li:nth-child(2),
+.controls ul li:nth-child(3),
+.controls ul li:nth-child(4)
+/*.controls ul li:nth-child(5)*/
+{
+  /*visibility: hidden;*/
+}
+

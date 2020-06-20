@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hyperbolic Tilings</title>
+  <meta charset="utf-8" />
+  <meta name="copyright" content="Nicolas Garcia Belmonte" />
+  <link rel="shortcut icon" type="image/ico" href="img/blog2.ico" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection, handheld" />
+  <!-- Twitter card -->
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:site" value="@philogb">
+  <meta name="twitter:creator" value="@philogb">
+  <meta name="twitter:url" value="http://philogb.github.io/page/myrihaedral">
+  <meta name="twitter:title" value="Nicolas Garcia Belmonte">
+  <meta name="twitter:description" value="Myriahedral Projections: Unfolding the Earth">
+  <meta name="twitter:image:src" value="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  <!--facebook open graph-->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nicolas Garcia Belmonte">
+  <meta property="og:url" content="http://philogb.github.io/page/myrihaedral">
+  <meta property="og:description" content="Myriahedral Projections: Unfolding the Earth">
+  <meta property="og:site_name" content="Twitter">
+  <meta property="og:image" content="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  </head>
+
+  <body>
+    <article>
+      <header class="heading">
+        <h1>Symmetric Tilings</h1>
+      </header>
+      <section id="interactive">
+        <div class="webgl-canvas graticule">
+          <canvas id="lumagl-canvas"></canvas>
+        </div>
+        <div class="controls">
+          <ul>
+          <li>Symmetry type</li>
+          <li>Schwarz-Christoffel:
+            <input type=range min=0 max=1 step=0.01 value=0 id=mapping0></li>
+          <li>Upper half-plane:
+            <input type=range min=0 max=1 step=0.01 value=0 id=mapping1></li>
+          <li>Bulatov band:
+            <input type=range min=0 max=1 step=0.01 value=0 id=mapping2></li>
+          <li>Stereographic (was: Klein-Bertrami, Joukowski):
+          <input type=range min=0 max=1 step=0.01 value=0 id=mapping3></li>
+          <li>Elevation: <input type=range min=0 max=1 step=0.01 value=0 id=elevation></li>
+          <li>Spiral: <input type=range min=0 max=1 step=0.01 value=0 id=spiral></li>
+          <li>Margin: <input type=range min=0 max=1 step=0.01 value=1 id=margin></li>
+          <li>Flat: <input type=range min=0 max=1 step=0.01 value=1 id=flat></li>
+        </ul>
+          <video id="movie1" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/1.webmsd.webm" type="video/webm"/>
+            <source src="img/1.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie2" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/2.webmsd.webm" type="video/webm"/>
+            <source src="img/2.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie3" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/3.webmsd.webm" type="video/webm"/>
+            <source src="img/3.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie4" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/4.webmsd.webm" type="video/webm"/>
+            <source src="img/4.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie5" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/5.webmsd.webm" type="video/webm"/>
+            <source src="img/5.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie6" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/6.webmsd.webm" type="video/webm"/>
+            <source src="img/6.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie7" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/7.webmsd.webm" type="video/webm"/>
+            <source src="img/7.mp4" type="video/mp4"/>
+          </video>
+          <video id="movie8" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/8.webmsd.webm" type="video/webm"/>
+            <source src="img/8.mp4" type="video/mp4"/>
+          </video>
+
+          <video id="moviea1" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a1.webmhd.webm" type="video/webm"/>
+            <source src="img/a1.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea2" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a2.webmhd.webm" type="video/webm"/>
+            <source src="img/a2.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea3" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a3.webmhd.webm" type="video/webm"/>
+            <source src="img/a3.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea4" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a4.webmhd.webm" type="video/webm"/>
+            <source src="img/a4.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea5" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a5.webmhd.webm" type="video/webm"/>
+            <source src="img/a5.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea6" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a6.webmhd.webm" type="video/webm"/>
+            <source src="img/a6.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea7" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a7.webmhd.webm" type="video/webm"/>
+            <source src="img/a7.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea8" controls class="shadows hidden" width="240" loop="true">
+            <source src="img/a8.webmhd.webm" type="video/webm"/>
+            <source src="img/a8.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea9" controls class="shadows hidden" width="240" loop="true">
+            <!--<source src="img/a9.webmhd.webm" type="video/webm"/>-->
+            <source src="img/a9.mp4" type="video/mp4"/>
+          </video>
+          <video id="moviea10" controls class="shadows hidden" width="240" loop="true">
+            <!--<source src="img/a10.webmhd.webm" type="video/webm"/>-->
+            <source src="img/a10.mp4" type="video/mp4"/>
+          </video>
+
+          <!--<p>-->
+          <!--blah.-->
+          <!--</p>-->
+          <!--<ul>-->
+          <!--</ul>-->
+          <!--<p>-->
+          <!--Made by <a href="https://twitter.com/philogb">@philogb</a>.-->
+          <!--</p>-->
+        </div>
+        </section>
+    </article>
+    <script src="bundle.js?2"></script>
+  </body>
+</html>
