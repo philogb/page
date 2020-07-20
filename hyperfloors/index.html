@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hyperbolic Floors</title>
+  <meta charset="utf-8" />
+  <meta name="copyright" content="Nicolas Garcia Belmonte" />
+  <link rel="shortcut icon" type="image/ico" href="img/hf.ico" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection, handheld" />
+  <!-- Twitter card -->
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:site" value="@philogb">
+  <meta name="twitter:creator" value="@philogb">
+  <meta name="twitter:url" value="http://philogb.github.io/page/myrihaedral">
+  <meta name="twitter:title" value="Nicolas Garcia Belmonte">
+  <meta name="twitter:description" value="Myriahedral Projections: Unfolding the Earth">
+  <meta name="twitter:image:src" value="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  <!--facebook open graph-->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nicolas Garcia Belmonte">
+  <meta property="og:url" content="http://philogb.github.io/page/myrihaedral">
+  <meta property="og:description" content="Myriahedral Projections: Unfolding the Earth">
+  <meta property="og:site_name" content="Twitter">
+  <meta property="og:image" content="http://philogb.github.io/page/myriahedral/img/graticule.png">
+  </head>
+
+  <body>
+    <div id="progress" style="opacity: 0;"><div id="progress-bar" style="width: 0%;"></div><span class="text">Loading...</span></div>
+    <div class="top-level-flex">
+      <div class="row">
+        <div class="col left">
+        </div>
+        <div class="col middle">
+          <canvas id="lumagl-canvas" width=800 height=800>
+        </canvas>
+        </div>
+        <div class="col right">
+          <section>
+            <header>
+              <h1>Hyperbolic Floors</h1>
+            </header>
+            <div class="caption">
+              <p>This interactive work presents hundreds of floor patterns mapped from Euclidean to Hyperbolic space in an aesthetically pleasing way. The result is a novel way to look at floors: transcending the geometry they’re confined in -and depicting their infinite nature in a compact way.</p>
+              <p>Blog post coming soon. Follow <a href="https://twitter.com/philogb">@philogb</a> | <a href="https://instagram.com/artematician">@artematician</a> to learn more</a>.</p>
+              <!--<p>Check out the <a href="#">blog post</a> to learn more about this project.</p>-->
+            <div>
+            <div class="controls">
+              <input type=checkbox id=animation name=animation /><label for=animation>Toggle animation</label> | Toggle grouping:
+              <ul>
+                <li><a id="pack-main" class="selected" href="#">Circle Packing</a> | </li>
+                <li><a id="pack-eorb" href="#">Wallpaper Group</a> | </li>
+                <li> <a id="pack-horb" href="#">Hyperbolic Group</a> | </li>
+                <li><a id="grid-main" href="#">Grid</a></li>
+            </div>
+              <!--<p>The process is as follows: For each floor picture we a) extract its wallpaper group and fundamental domain, b) find a conformal mapping from that domain to one in Hyperbolic Geometry and a suitable symmetry group in that space, and then c) render it using a reverse pixel lookup technique.</p>-->
+            <div id="content" class="hidden">
+              <p id="group-caption">
+                Wallpaper group: <span id="data-group"></span> &#8594; Hyperbolic group: <span id="data-hgroup"></span>
+              </p>
+              <figure>
+                <img id="original"/>
+                <figcaption>Source: <a href="https://www.instagram.com/parisianfloors/" target="_blank">@parisianfloors</a>. Location: <span id="data-location"></span></figcaption>
+              </figure>
+              <!--<img id="tile"/>-->
+            </div>
+            <div class="caption">
+              <p>This work would not have been possible without images sourced from <a href="https://www.instagram.com/parisianfloors/" target="_blank">@parisianfloors</a>. The technique is based on <a href="https://mediatum.ub.tum.de/doc/1210572/1210572.pdf" target="_blank">Hyperbolization of Euclidean Ornaments</a> by von Gagern.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
