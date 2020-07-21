@@ -15,6 +15,7 @@ html, body {
 a, a:visited, a:link {
   color: palevioletred;
   display: inline-block;
+  font-size: 1em;
 }
 
 a.selected {
@@ -119,8 +120,8 @@ img#tile {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    align-self: center;
-    align-items: center;
+    align-self: flex-start;
+    align-items: flex-start;
     height: 100%;
   }
 
@@ -166,8 +167,8 @@ img#tile {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    align-self: center;
-    align-items: center;
+    align-self: flex-start;
+    align-items: flex-start;
     width: 100%;
   }
 
