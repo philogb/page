@@ -23,16 +23,16 @@ a.selected {
 }
 
 #progress {
-    text-align: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 1000000;
-    transition: opacity 200ms;
-    font-size: .9em;
-    /*color: #fff;*/
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1000000;
+  transition: opacity 200ms;
+  font-size: .9em;
+  /*color: #fff;*/
 }
 
 #progress #progress-bar {
@@ -45,34 +45,6 @@ a.selected {
 #progress .text {
   font-size: 1.2em;
   padding-left: 10px;
-}
-
-/* All if landscape mode */
-
-.top-level-flex {
-  display:flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-}
-
-.col {
-  /*flex-grow: 1;*/
-  display: flex;
-  flex-direction: column;
-  /*justify-content: space-evenly;*/
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-self: center;
-  align-items: center;
-  height: 100%;
-}
-
-.col.right {
-  max-width: 400px;
-  min-width: 300px;
 }
 
 #content p, .caption p {
@@ -129,19 +101,98 @@ img#tile {
   /*font-size: 1.2em;*/
   margin: 0 20px;
 }
+/* All if landscape mode */
+@media screen and (orientation: landscape) {
 
-.row {
-  display: flex;
-  align-self: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  justify-content: space-evenly;
+  .top-level-flex {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+
+  .col {
+    /*flex-grow: 1;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-self: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .col.left header, .col.left .caption {
+    display:none;
+  }
+
+  .col.right {
+    max-width: 400px;
+    min-width: 300px;
+  }
+
+
+  .row {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  canvas {
+    height: 100%;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+  }
+
 }
 
-canvas {
-  height: 100%;
-  width: calc(height);
-  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
-}
+@media screen and (orientation: portrait) {
+    .top-level-flex {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
 
+  .col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /*.col.right header, .col.right .caption {*/
+    /*display:none;*/
+  /*}*/
+  /*.col.right {*/
+    /*max-width: 400px;*/
+    /*min-width: 300px;*/
+  /*}*/
+
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  canvas {
+    width: 100%;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+  }
+
+}
