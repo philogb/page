@@ -181,6 +181,13 @@ img#tile {
     width: 100%;
   }
 
+  .col.middle {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+
   /*.col.right header, .col.right .caption {*/
     /*display:none;*/
   /*}*/
