@@ -57,10 +57,14 @@ body.dropshadow canvas {
   text-align: left;
 }
 
-.hidden {
-  display: none;
-  /*visibility:hidden;*/
+.col.hidden #content {
+  display:none;
 }
+
+/*.hidden {*/
+  /*display: none;*/
+  /*visibility:hidden;*/
+/*}*/
 
 figcaption {
   font-size: 0.9em;
@@ -195,6 +199,30 @@ img#tile {
     height: 40%;
   }
 
+  .col.right .caption {
+      display:none;
+  }
+  
+  .col.right.hidden .caption {
+      display:block;
+  }
+
+  .col.right.hidden #content {
+    display:none;
+  }
+
+  .col.right #content {
+    margin-bottom: 15px;
+  }
+
+
+  .col.right section {
+    width: 100%;
+  }
+
+  div.controls {
+    text-align: center;
+  }
 
   .row {
     display: flex;
