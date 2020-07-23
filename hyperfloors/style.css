@@ -23,6 +23,11 @@ a.selected {
   text-decoration: none;
 }
 
+body.dropshadow canvas {
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+}
+
+
 #progress {
   text-align: left;
   position: absolute;
@@ -62,7 +67,7 @@ figcaption {
   font-style: italic;
 }
 
-.caption p#group-caption {
+#content p#group-caption {
   text-align: center;
 }
 
@@ -148,16 +153,15 @@ img#tile {
   canvas {
     height: 100%;
   }
-
-  body.dropshadow canvas {
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
-  }
-
 }
 
 @media screen and (orientation: portrait) {
+  html, body, a, a:visited, a:link, a:hover {
+    text-size-adjust: none;
+  }
+
   .top-level-flex {
-    font-size: 1.4em;
+    font-size: 2em;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -180,10 +184,9 @@ img#tile {
   /*.col.right header, .col.right .caption {*/
     /*display:none;*/
   /*}*/
-  /*.col.right {*/
-    /*max-width: 400px;*/
-    /*min-width: 300px;*/
-  /*}*/
+  .col.right {
+    height: 60%;
+  }
 
 
   .row {
@@ -200,9 +203,6 @@ img#tile {
     width: 100%;
   }
   
-  body.dropshadow canvas {
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
-  }
 
   img#original, img#tile {
     display: block;
