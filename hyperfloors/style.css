@@ -53,8 +53,8 @@ a.selected {
 }
 
 .hidden {
-  /*display: none;*/
-  visibility:hidden;
+  display: none;
+  /*visibility:hidden;*/
 }
 
 figcaption {
@@ -156,7 +156,8 @@ img#tile {
 }
 
 @media screen and (orientation: portrait) {
-    .top-level-flex {
+  .top-level-flex {
+    font-size: 1.4em;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -174,6 +175,7 @@ img#tile {
     align-self: flex-start;
     align-items: flex-start;
     width: 100%;
+    height: 50%;
   }
 
   /*.col.right header, .col.right .caption {*/
@@ -203,4 +205,10 @@ img#tile {
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
   }
 
+  img#original, img#tile {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin: 7px auto;
+  }
 }
