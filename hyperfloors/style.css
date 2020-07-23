@@ -161,7 +161,7 @@ img#tile {
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
   }
@@ -172,7 +172,7 @@ img#tile {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    align-self: flex-start;
+    align-self: flex-end;
     align-items: flex-start;
     width: 100%;
     height: 50%;
